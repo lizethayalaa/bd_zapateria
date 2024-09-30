@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatería La Sangileña</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #7daa8c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Encabezado */
+        h1 {
+            font-size: 2.5em;
+            color: #215e35;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos del contenedor del formulario */
+        #div_inicio_sesión {
+            background-color: #9ec9ac;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Estilos de los inputs */
+        input[type="name"], input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #215e35
+            ;
+            border-radius: 5px;
+            font-size: 16px;
+        }w
+
+        /* Corrige el typo en el placeholder */
+        input[type="password"]::placeholder {
+            color: 215e35#888;
+        }
+
+        /* Estilos del botón de enviar */
+        button {
+            width: 100%;
+            background-color: #215e35
+            ;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0e2014;
+        }
+
+        /* Estilo para enlaces como "Olvidé mi contraseña" (si se necesita) */
+        a {
+            display: block;
+            color: #215e35;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 480px) {
+            #div_inicio_sesión {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            input[type="name"], input[type="password"] {
+                padding: 12px;
+
+                
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Zapatería La Sangileña</h1>
+    <div id="div_inicio_sesión">
+        <form action="modelo/loguear.php" method="post">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <br>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <br>
+            <button type="submit">Ingresar</button> 
+        </form>
+    </div>
+</body>
+</html>
